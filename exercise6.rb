@@ -8,5 +8,12 @@ def list_items(grocery_list)
 end
 end
 
+puts "I have #{grocery_list.length} items to pick up"
 
 list_items(grocery_list)
+
+if grocery_list.include?("bananas")
+	puts "You need to pick up bananas"
+else
+	puts "You do not need to pick up bananas"
+end
