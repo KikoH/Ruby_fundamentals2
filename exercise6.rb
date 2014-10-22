@@ -18,4 +18,10 @@ else
 	puts "You do not need to pick up bananas"
 end
 
-puts grocery_list[1]
+puts "#{grocery_list[1]} is the second item on the array"
+
+puts "After not finding the salmon"
+
+grocery_list.delete("salmon")
+
+list_items(grocery_list)
