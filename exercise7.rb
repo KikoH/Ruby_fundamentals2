@@ -8,6 +8,8 @@ def display_hash
 	students.each do |key, value|
 		puts "#{key}: #{value}"
 	end
+	puts "#{students.keys}"
 end
 
 display_hash
+
