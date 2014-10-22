@@ -5,10 +5,15 @@ def display_hash
 	:cohort3 => 22
 }
 	students[:cohort4]= 43
+	students.delete(:cohort2)
 	students.each do |key, value|
 		puts "#{key}: #{value}"
 	end
-	puts "#{students.keys}"
+	puts "* #{students.keys}"
+	puts "* After expanding the cohorts 5%. These are the new values"
+	students.each do |key, value|
+		puts "#{value + (value * 0.05)}"
+	end
 end
 
 display_hash
