@@ -10,10 +10,15 @@ def display_hash
 		puts "#{key}: #{value}"
 	end
 	puts "* #{students.keys}"
-	puts "* After expanding the cohorts 5%. These are the new values"
+	puts "* After expanding the cohorts 5%. These are the new values (rounded)"
 	students.each do |key, value|
-		puts "#{value + (value * 0.05)}"
+		puts "#{value + (value * 0.05).round}"
 	end
+	sum = 0
+	students.each_value do |value|
+		sum = sum + value
+	end
+	puts "Total sum of cohorts = #{sum}"
 end
 
 display_hash
